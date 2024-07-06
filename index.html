@@ -182,15 +182,10 @@
                 max-width: 48%;
             }
 
-            .images {
-                order: 1; /* Ensure the images come first */
-            }
-
-            .button-container {
-                order: 2; /* Ensure the button comes after the images */
-                width: 100%;
-                text-align: center; /* Center the button */
-                margin-top: 20px;
+            .button-51 {
+                position: static; /* Reset the position */
+                margin: 20px auto 0; /* Center the button below the images */
+                display: block; /* Make the button a block element */
             }
         }
     </style>
@@ -223,6 +218,7 @@
                 rating comedy, gore, and action <br>
                 to match your taste perfectly <br>
             </div>
+            <a class="button-51" role="button" href="bars.html">Dive in</a>
         </div>
         <div class="images">
             <div class="column">
@@ -240,9 +236,6 @@
                 <img src="https://foundationdesign.co.nz/wp-content/uploads/2014/05/The-Last-Exorcism-Part-II1.jpg" alt="The Last Exorcism Part II">
                 <img src="https://www.cinelinx.com/wp-content/uploads/2020/12/the-green-knight-poster.jpeg" alt="The Green Knight">
             </div>
-        </div>
-        <div class="button-container">
-            <a class="button-51" role="button" href="bars.html">Dive in</a>
         </div>
     </div>
 </body>
