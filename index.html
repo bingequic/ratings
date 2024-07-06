@@ -128,11 +128,11 @@
             box-sizing: border-box;
         }
 
-      .column img {
-    width: 70%; /* Make all images fill the entire width of their container */
-    height: auto; /* Ensure images maintain their aspect ratio */
-    margin-bottom: 10px; /* Add margin between images */
-}
+        .column img {
+            width: 100%; /* Make all images fill the entire width of their container */
+            height: auto; /* Ensure images maintain their aspect ratio */
+            margin-bottom: 10px; /* Add margin between images */
+        }
 
         .sketch-highlight {
             position: relative;
@@ -171,12 +171,17 @@
             }
 
             .column {
-                flex: 1 1 70%; /* Adjust columns to take up 45% each at medium screen sizes */
-                max-width: 70%;
+                flex: 1 1 45%; /* Adjust columns to take up 45% each at medium screen sizes */
+                max-width: 45%;
             }
         }
 
-      
+        @media (max-width: 480px) {
+            .column {
+                flex: 1 1 48%; /* Adjust columns to take up 48% each at small screen sizes */
+                max-width: 48%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -186,12 +191,12 @@
     </header>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
         <defs>
-          <filter id="marker-shape">
-            <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
-            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
-          </filter>
+            <filter id="marker-shape">
+                <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+            </filter>
         </defs>
-      </svg>
+    </svg>
     <div class="container">
         <div class="content">
             <div class="description">
@@ -214,7 +219,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/en/0/09/Fight_Club_%282023_film%29.jpg" alt="Fight Club">
                 <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/book/j/l/n/no-country-for-old-men-original-imaggeejhrxhjg2t.jpeg?q=90&crop=false" alt="No Country for Old Men">
                 <img src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/green-book-web.jpg" alt="Green Book">
-                
             </div>
             <div class="column">
                 <img src="https://images.bauerhosting.com/legacy/empire-images/features/59e8d795405a5c6805947751/50%20little%20miss%20sunshine.jpg?auto=format&w=1440&q=80" alt="Little Miss Sunshine">
